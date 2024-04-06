@@ -8,14 +8,17 @@ export default class HeaderScroll {
   handleScroll() {
     const currentScrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
-    if (currentScrollTop > this.lastScrollTop && currentScrollTop > this.scrollThreshold) {
+    // Adiciona a classe se o scroll passou o threshold definido
+    if (currentScrollTop > this.scrollThreshold) {
       this.header.classList.add('header-scrolled');
-    } else {
+    } 
+
+    // Remove a classe apenas se o scrollTop for 0 (topo da página)
+    if (currentScrollTop === 0) {
       this.header.classList.remove('header-scrolled');
     }
-
-    this.lastScrollTop = currentScrollTop;
   }
+
 
   init() {
     window.addEventListener('scroll', this.handleScroll.bind(this));
