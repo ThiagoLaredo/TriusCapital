@@ -482,9 +482,6 @@ export default class MySwiper {
       img.dispatchEvent(new Event('load'));
     }
   }
-  
-  
-  
 }
 
 
