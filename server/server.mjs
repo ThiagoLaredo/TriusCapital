@@ -1,13 +1,16 @@
 import dotenv from 'dotenv';
 dotenv.config();
 
+console.log('EMAIL_USER:', process.env.EMAIL_USER);
+console.log('EMAIL_PASS:', process.env.EMAIL_PASS);
+
 import express from 'express';
 import bodyParser from 'body-parser';
 import nodemailer from 'nodemailer';
 import cors from 'cors';
 
 const app = express();
-const port = 5000; // Mude a porta para 5000
+const port = 5000; // Porta configurada para 5000
 
 app.use(cors());
 app.use(bodyParser.json());

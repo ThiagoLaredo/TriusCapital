@@ -90,6 +90,6 @@ module.exports = {
       changeOrigin: true,
       timeout: 120000  // Aumenta o tempo limite para 120 segundos
     }]
+    }
   }
-}
-  
+
