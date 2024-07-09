@@ -35,7 +35,7 @@ ul[data-menu="list"] {
 
 .menu ul {
   display: flex;
-  gap: 1.4rem;
+  gap: 1.2rem;
   align-items: center;
   }
 
@@ -108,7 +108,7 @@ ul[data-menu="list"] {
   background: none;
   border: 0;
   color: white;
-  padding: 0 20px; /* Remove vertical padding to avoid affecting the height */
+  padding: 0 12px; /* Remove vertical padding to avoid affecting the height */
   font-size: 14px;
   height: 40px; /* Define a consistent height for the button */
   line-height: 40px; /* Set line-height equal to the button height for vertical centering */
