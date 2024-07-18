@@ -225,7 +225,7 @@ export default class MySwiper {
           },
           onComplete: function () {
             // Quando a animação termina, garante que o texto é "+ 1 BI"
-            element.innerHTML = "+ (R$) 1 Bi";
+            element.innerHTML = "+ 1 Bi";
             // Marca o elemento como animado
             element.setAttribute('data-animated', 'true');
           },
