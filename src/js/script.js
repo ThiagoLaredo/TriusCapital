@@ -5,9 +5,7 @@ import MySwiper from './modules/mySwiper.js';
 import ConsoleTextEffect from './modules/text-effect.js';
 import FormHandler from './modules/formHandler.js';
 import LanguageSwitcher from './modules/languageSwitcher.js';
-// import translations from '../translations.json'
-
-
+import translations from '../translations.json'
 
 import "../css/global.css";
 import "../css/header.css";
@@ -35,6 +33,7 @@ scrollAnima.init();
 
 new MySwiper();
 
+
 document.addEventListener('DOMContentLoaded', () => {
   const targetElement = document.getElementById('typing');
   if (targetElement) {
@@ -59,30 +58,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   document.addEventListener('DOMContentLoaded', () => {
-    // Carrega as traduções dinamicamente do arquivo JSON
-    fetch('../translations.json')
-        .then(response => response.json())
-        .then(translations => {
-            const languageSwitcher = new LanguageSwitcher(translations);
 
-            // Define o português como idioma padrão ao carregar
+    const languageSwitcher = new LanguageSwitcher(translations);
+
+    const btnEnglish = document.getElementById('switch-en');
+    const btnPortuguese = document.getElementById('switch-pt');
+
+    if (btnEnglish && btnPortuguese) {
+        btnEnglish.addEventListener('click', () => {
+            languageSwitcher.switchLanguage('en');
+        });
+
+        btnPortuguese.addEventListener('click', () => {
             languageSwitcher.switchLanguage('pt');
-
-            const btnEnglish = document.getElementById('switch-en');
-            const btnPortuguese = document.getElementById('switch-pt');
-
-            if (btnEnglish && btnPortuguese) {
-                btnEnglish.addEventListener('click', () => {
-                    languageSwitcher.switchLanguage('en');
-                });
-
-                btnPortuguese.addEventListener('click', () => {
-                    languageSwitcher.switchLanguage('pt');
-                });
-            } else {
-                console.error('Buttons not found');
-            }
-        })
-        .catch(error => console.error('Erro ao carregar traduções:', error));
+        });
+    } else {
+        console.error('Buttons not found');
+    }
 });
-
