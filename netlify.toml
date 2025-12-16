@@ -1,6 +1,0 @@
-[build]
-  command = "npm run build"  # ou seu comando de build
-  publish = "build"          # pasta de output
-
-  [functions]
-  directory = "netlify/functions"  # Diretório onde as funções serverless estão localizadas
