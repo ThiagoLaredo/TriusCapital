@@ -6,12 +6,14 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
-
 module.exports = {
-  entry: './src/js/script.js',
+  entry: {
+    main: './src/js/script.js',
+    ouvidoria: './src/js/ouvidoria.js'
+  },
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'main.js',
+    filename: '[name].js',
   },
   module: {
     rules: [
@@ -32,10 +34,10 @@ module.exports = {
       },
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
-        type: 'asset/resource',  // Webpack 5 maneira de lidar com recursos estáticos
+        type: 'asset/resource',
         generator: {
-          filename: 'assets/images/[hash][ext][query]'  // Local e nome do arquivo no output
-      }
+          filename: 'assets/images/[hash][ext][query]'
+        }
       },
     ],
   },
@@ -52,23 +54,51 @@ module.exports = {
       }),
       new CssMinimizerPlugin(),
     ],
+    // Adicionar para evitar duplicação de módulos compartilhados
+    splitChunks: {
+      chunks: 'all',
+      cacheGroups: {
+        vendors: {
+          test: /[\\/]node_modules[\\/]/,
+          name: 'vendors',
+          chunks: 'all',
+        },
+        styles: {
+          name: 'styles',
+          test: /\.css$/,
+          chunks: 'all',
+          enforce: true,
+        },
+      },
+    },
   },
   plugins: [
     new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({
-      filename: 'style.css',
+      filename: '[name].css',  // Isso gerará main.css e ouvidoria.css
     }),
+    // Para index.html (main)
     new HtmlWebpackPlugin({
       template: './src/index.html',
       filename: 'index.html',
+      chunks: ['main', 'vendors'], // Carrega main.js e vendors.js
       minify: {
         removeRedundantAttributes: false,
       },
-  }),
+    }),
+    // Para ouvidoria.html
+    new HtmlWebpackPlugin({
+      template: './src/ouvidoria.html',
+      filename: 'ouvidoria.html',
+      chunks: ['ouvidoria', 'vendors'], // Carrega ouvidoria.js e vendors.js
+      minify: {
+        removeRedundantAttributes: false,
+      },
+    }),
     new CopyWebpackPlugin({
       patterns: [
-        { from: 'src/img', to: 'img' }, // Copia tudo de src/img para dist/img
-        { from: 'src/translations.json', to: 'translations.json' } // Copia seu arquivo JSON para dist
+        { from: 'src/img', to: 'img' },
+        { from: 'src/translations.json', to: 'translations.json' },
       ]
     }),
   ],
@@ -84,7 +114,7 @@ module.exports = {
     port: 9000,
     open: true,
     hot: true,
-    proxy: [{  // Usar um array aqui
+    proxy: [{  
       context: () => true,
       target: 'http://localhost:5005',
       secure: false,
@@ -92,5 +122,4 @@ module.exports = {
       timeout: 120000
     }]
   }
-}
-  
+};

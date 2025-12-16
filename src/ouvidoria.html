@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Canal de Denúncias - Trius Capital</title>
+    <meta name="description" content="Canal de Denúncias da Trius Capital - Reporte irregularidades e violações ao Código de Conduta Ética de forma segura e confidencial">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:title" content="Canal de Denúncias - Trius Capital">
+    <meta property="og:description" content="Reporte irregularidades e violações ao Código de Conduta Ética de forma segura e confidencial">
+    <meta property="og:image" content="https://www.triuscapital.com.br/img/trius-capital-1200w.webp">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:url" content="https://www.triuscapital.com/ouvidoria">
+
+    <!-- Favicon -->
+    <link rel="icon" href="./img/favicon.svg" type="image/svg+xml">
+
+    <!-- Fontes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+      
+    <!-- JS -->
+    <script>document.documentElement.className += ' js';</script>
+</head>
+<body class="ouvidoria-page">
+    <!-- Header -->
+    <header class="header">
+      <div class="container">
+      <div class="header_menu">
+        <a data-menu="logo" href="/"> <img src="img/logo.svg" alt="Logo da Trius Capital"></a>
+        <span class="visually-hidden">Voltar para a página inicial</span>
+        <nav class="menu" data-menu="suave">
+          <button data-menu="button" aria-label="Abrir menu" aria-controls="menu" aria-expanded="false">
+            <span id="hamburguer"></span>
+          </button>          
+          <ul data-menu="list" id="menu">
+            <li><a data-translate="menuInstitucional" href="./#institucional">Institucional</a></li>
+            <li><a data-translate="menuParceriasGlobais" href="./#parcerias-globais">Parcerias Globais</a></li>
+            <li><a data-translate="menuQuemSomos" href="./#quemsomos">Quem Somos</a></li>
+            <li><a data-translate="menuOQueFazemos" href="./#oquefazemos">O que Fazemos</a></li>
+            <li><a data-translate="menuCompliance" href="./#complaince">Compliance</a></li>
+            <li><a data-translate="menuContato" href="./#contato">Contato</a></li>
+            <!-- Botão de alternância de idioma -->
+            <li class="language-switch">
+              <button id="switch-en" class="language-button">EN</button>
+              <button id="switch-pt" class="language-button">PT</button>
+            </li>
+          </ul>  
+        </nav>
+      </div>
+     </div>
+    </header>
+
+    <a data-menu="contato-mobile" href="mailto:contato@triuscapital.com.br" target="_blank">contato@triuscapital.com.br</a>
+    <a data-menu="linkedin" href="https://www.linkedin.com/company/trius-capital/" target="_blank">
+      <img src="./img/linkedin-trius.svg">
+      <span class="visually-hidden">Ir para o Linkedin</span>
+    </a>
+
+    <!-- Conteúdo Principal -->
+    <main class="main-content">
+        <div class="container ouvidoria-container">
+            <!-- Seção do Formulário (Esquerda) -->
+            <section class="form-section">
+                <div class="form">
+                    <h2>Canal de Denúncias - Trius Capital</h2>
+                    <form id="ouvidoria-form" method="POST" enctype="multipart/form-data">
+                        <!-- Campo Título -->
+                        <div class="form-field">
+                            <label for="titulo">Título <span class="required">*</span></label>
+                            <input type="text" id="titulo" name="titulo" required 
+                                   placeholder="Digite o título da denúncia">
+                        </div>
+                        
+                        <!-- Campo Descrição -->
+                        <div class="form-field">
+                            <label for="descricao">Descrição <span class="required">*</span></label>
+                            <textarea id="descricao" name="descricao" rows="5" required 
+                                      placeholder="Descreva os fatos com detalhes"></textarea>
+                            <p class="form-note">Inclua nomes, cargos, datas, locais e outras informações relevantes.</p>
+                        </div>
+                        
+                        <!-- Campos Nome e Email lado a lado -->
+                        <div class="form-field">
+                            <div class="half-width-1">
+                                <label for="nome">Nome Completo</label>
+                                <input type="text" id="nome" name="nome" 
+                                       placeholder="Seu nome completo (opcional)">
+                            </div>
+                            
+                            <div class="half-width">
+                                <label for="email">E-mail</label>
+                                <input type="email" id="email" name="email" 
+                                       placeholder="seu@email.com (opcional)">
+                            </div>
+                            <div style="clear: both;"></div>
+                        </div>
+                        
+                        <!-- Campo Anexos -->
+                        <div class="file-upload">
+                            <label for="anexos">Anexar Arquivos</label>
+                            <input type="file" id="anexos" name="anexos[]" multiple 
+                                   accept=".pdf,.doc,.docx,.jpg,.jpeg,.png,.txt">
+                            <div class="file-info">
+                                <p>Formatos aceitos: PDF, DOC, JPG, PNG, TXT</p>
+                                <p>Tamanho máximo: 5MB por arquivo</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Botão Enviar -->
+                        <button type="submit" class="btn-submit">Enviar Denúncia</button>
+                    </form>
+                </div>
+            </section>
+            
+            <!-- Seção do Texto (Direita) -->
+            <section class="text-section">
+                <h2>Canal de Denúncias - Trius Capital</h2>
+                <p>A Trius Capital incentiva todos os seus Colaboradores, Terceiros e o público em geral a utilizarem este Canal de Denúncias para reportar irregularidades ou suspeitas de irregularidades relacionadas a violações aos Códigos de Conduta Ética, às políticas e normas da Trius Capital, bem como quaisquer informações acerca de eventual descumprimento de dispositivos legais e normativos aplicáveis.</p>
+                
+                <p>É importante que o relato seja feito da forma mais detalhada possível, indicando, por exemplo, nomes e cargos das pessoas envolvidas, os seus respectivos papéis nos fatos, o local e a data do ocorrido, se foi uma conduta pontual ou se ainda está em andamento, entre outras informações relevantes, sempre que possível. Caso não tenha todas as informações, a denúncia pode ser realizada da mesma maneira.</p>
+                
+                <p>Apesar da possibilidade de denúncias anônimas, incentivamos que o denunciante se identifique, caso se sinta confortável, pois possibilita que o time de Compliance entre em contato para obter mais informações ou prestar esclarecimentos sobre o relato realizado. A Trius Capital garante o devido sigilo e preservação da identidade do denunciante.</p>
+                
+                <p>Lembre-se que esse Canal não deve ser utilizado para sugestões, solicitações, reclamações ou outras questões não diretamente relacionadas a uma denúncia.</p>
+                
+                <div class="contact-info">
+                    <p><strong>Para outros assuntos:</strong></p>
+                    <p>E-mail: <a href="mailto:ouvidoria@triuscapital.com">ouvidoria@triuscapital.com</a></p>
+                    <p>Telefone: +55 11 3759-4800</p>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <!-- Inclua o footer do seu site aqui -->
+        <!-- <?php include 'footer.php'; ?> -->
+        
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <p>&copy; 2025 Trius Capital. Todos os direitos reservados.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal de Confirmação -->
+    <div id="modal-confirmacao" class="modal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Denúncia enviada com sucesso!</h3>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="success-icon">✓</div>
+                <p>Sua denúncia foi registrada e será analisada pela equipe de Compliance da Trius Capital.</p>
+                <p><strong>Número do protocolo:</strong> <span id="protocol-number">TC-OUV-2024-001</span></p>
+                <p>Obrigado por contribuir para manter nosso ambiente ético e transparente.</p>
+            </div>
+            <div class="modal-footer">
+                <button id="modal-close-btn" class="btn-close">Fechar</button>
+            </div>
+        </div>
+    </div>
+ <script src="./ouvidoria.js"></script>
+
+</body>
+</html>

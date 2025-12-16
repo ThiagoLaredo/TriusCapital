@@ -1,0 +1,8 @@
+[build]
+  command = "npm run build"  # ou seu comando de build
+  publish = "build"          # pasta de output
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

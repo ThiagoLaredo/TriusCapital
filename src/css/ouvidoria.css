@@ -1,0 +1,497 @@
+/* ==========================================================================
+   ESTILOS ESPECÍFICOS PARA PÁGINA DE OUVIDORIA
+   ========================================================================== */
+.ouvidoria-page .header {
+    background-color: #4E7A9B;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.ouvidoria-page .form h2 {
+    color: #2c5282;
+    font: 500 1.8rem/1.125 "Hind", sans-serif;
+}
+.footer {
+    background-color: #4E7A9B;
+    padding: 40px 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+    text-align: center;
+    color: white;
+    font: 300 1rem/1.125 "Hind", sans-serif;
+}
+
+.footer p {
+    margin: 0;
+}
+
+/* Container Principal */
+.ouvidoria-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 200px 20px 80px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 60px;
+    align-items: flex-start;
+}
+
+/* Seções */
+.form-section {
+    flex: 1;
+    min-width: 300px;
+}
+
+.text-section {
+    flex: 1;
+    min-width: 300px;
+    background-color: #f8fafc;
+    padding: 40px;
+    border-radius: 10px;
+    border-left: 4px solid #4E7A9B;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* Texto da Seção Direita */
+.text-section h2 {
+    color: #2c5282;
+    margin-bottom: 25px;
+    font: 500 1.8rem/1.125 "Hind", sans-serif;
+    border-bottom: 2px solid #e2e8f0;
+    padding-bottom: 10px;
+}
+
+.text-section p {
+    margin-bottom: 20px;
+    line-height: 1.6;
+    color: #2d3748;
+    font-size: 1rem;
+    text-align: justify;
+}
+
+.text-section p:last-child {
+    margin-bottom: 0;
+}
+
+/* Informações de Contato */
+.contact-info {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #e2e8f0;
+}
+
+.contact-info p {
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+}
+
+.contact-info a {
+    color: #4E7A9B;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-info a:hover {
+    color: #2c5282;
+    text-decoration: underline;
+}
+
+/* Formulário */
+#ouvidoria-form .form-field {
+    margin-bottom: 25px;
+}
+
+#ouvidoria-form .form-field label {
+    display: block;
+    margin-bottom: 8px;
+    color: #2d3748;
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
+#ouvidoria-form input[type="text"],
+#ouvidoria-form input[type="email"],
+#ouvidoria-form textarea {
+    width: 100%;
+    padding: 12px;
+    background-color: #446A87;
+    color: #fff;
+    border: 0.5px solid #4E7A9B;
+    border-radius: 6px;
+    font-family: "Hind", sans-serif;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+#ouvidoria-form input[type="text"]:focus,
+#ouvidoria-form input[type="email"]:focus,
+#ouvidoria-form textarea:focus {
+    outline: none;
+    border-color: #63b3ed;
+    box-shadow: 0 0 0 3px rgba(99, 179, 237, 0.2);
+}
+
+#ouvidoria-form input::placeholder,
+#ouvidoria-form textarea::placeholder {
+    color: #cbd5e0;
+}
+
+#ouvidoria-form textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+/* Campos Obrigatórios */
+.required {
+    color: #e53e3e;
+    font-weight: bold;
+}
+
+.form-note {
+    font-size: 0.85rem;
+    color: #718096;
+    margin-top: 6px;
+    font-style: italic;
+}
+
+/* Upload de Arquivos */
+.file-upload {
+    margin: 25px 0;
+    padding: 20px;
+    background-color: #edf2f7;
+    border-radius: 8px;
+    border: 2px dashed #cbd5e0;
+    transition: all 0.3s ease;
+}
+
+.file-upload:hover {
+    border-color: #4E7A9B;
+    background-color: #e6fffa;
+}
+
+.file-upload label {
+    display: block;
+    margin-bottom: 12px;
+    color: #2d3748;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.file-upload input[type="file"] {
+    width: 100%;
+    padding: 12px;
+    background-color: white;
+    color: #4a5568;
+    border: 1px solid #cbd5e0;
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: "Hind", sans-serif;
+}
+
+.file-upload input[type="file"]::file-selector-button {
+    background-color: #4E7A9B;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    margin-right: 15px;
+    cursor: pointer;
+    font-family: "Hind", sans-serif;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.file-upload input[type="file"]::file-selector-button:hover {
+    background-color: #2c5282;
+}
+
+.file-info {
+    margin-top: 10px;
+    font-size: 0.85rem;
+    color: #718096;
+}
+
+.file-info p {
+    margin-bottom: 4px;
+}
+
+/* Botão Enviar */
+.btn-submit {
+    background-color: #fff;
+    color: #4E7A9B;
+    padding: 14px 32px;
+    border: 2px solid #4E7A9B;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 6px;
+    font: 700 1rem/1 "Hind", sans-serif;
+    transition: all 0.3s ease;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.btn-submit:hover {
+    background-color: #4E7A9B;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(78, 122, 155, 0.3);
+}
+
+.btn-submit:active {
+    transform: translateY(0);
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.modal-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+    position: relative;
+    background-color: white;
+    margin: 4% auto;
+    padding: 0;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    animation: modalFadeIn 0.3s ease-out;
+}
+
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.modal-header {
+    padding: 20px 30px;
+    background-color: #4E7A9B;
+    color: white;
+    border-radius: 12px 12px 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal-header h3 {
+    margin: 0;
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.modal-close {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    line-height: 1;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease;
+}
+
+.modal-close:hover {
+    transform: scale(1.2);
+}
+
+.modal-body {
+    padding: 40px 30px;
+    text-align: center;
+}
+
+.success-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 20px;
+    background-color: #48bb78;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    animation: successPulse 1s ease;
+}
+
+@keyframes successPulse {
+    0% { transform: scale(0.8); opacity: 0; }
+    70% { transform: scale(1.1); }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+.modal-body p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+    color: #2d3748;
+}
+
+#protocol-number {
+    font-family: monospace;
+    background-color: #f7fafc;
+    padding: 4px 8px;
+    border-radius: 4px;
+    border: 1px solid #e2e8f0;
+}
+
+.modal-footer {
+    padding: 20px 30px;
+    background-color: #f7fafc;
+    border-radius: 0 0 12px 12px;
+    text-align: center;
+}
+
+.btn-close {
+    background-color: #4E7A9B;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 6px;
+    cursor: pointer;
+    font: 600 1rem/1 "Hind", sans-serif;
+    transition: all 0.3s ease;
+    min-width: 150px;
+}
+
+.btn-close:hover {
+    background-color: #2c5282;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(44, 82, 130, 0.3);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .ouvidoria-container {
+        flex-direction: column;
+        gap: 40px;
+        padding: 40px 20px;
+    }
+    
+    .text-section {
+        padding: 25px 20px;
+        order: -1; /* Coloca o texto em cima no mobile */
+    }
+    
+    .form-section {
+        width: 100%;
+    }
+    
+    .modal-content {
+        margin: 20% auto;
+        width: 95%;
+    }
+    
+    .modal-header,
+    .modal-body,
+    .modal-footer {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .half-width,
+    .half-width-1 {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 15px;
+        float: none;
+    }
+    
+    .form-field::after {
+        content: none;
+    }
+    
+    .success-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 2rem;
+    }
+}
+
+/* Acessibilidade - Foco */
+input:focus,
+textarea:focus,
+button:focus,
+select:focus {
+    outline: 3px solid #63b3ed;
+    outline-offset: 2px;
+}
+
+/* Estados de Validação */
+input:invalid:not(:focus):not(:placeholder-shown),
+textarea:invalid:not(:focus):not(:placeholder-shown) {
+    border-color: #e53e3e;
+    background-color: #fff5f5;
+}
+
+input:valid:not(:focus):not(:placeholder-shown),
+textarea:valid:not(:focus):not(:placeholder-shown) {
+    border-color: #48bb78;
+    background-color: #f0fff4;
+}
+
+/* Estilo para campo desabilitado */
+input:disabled,
+textarea:disabled,
+button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* Animações de transição */
+.form-field,
+.file-upload,
+.btn-submit {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Efeito de carregamento (opcional) */
+.loading {
+    position: relative;
+    pointer-events: none;
+    opacity: 0.7;
+}
+
+.loading::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    margin: -10px 0 0 -10px;
+    border: 2px solid #f3f3f3;
+    border-top: 2px solid #4E7A9B;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}

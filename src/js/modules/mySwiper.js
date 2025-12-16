@@ -1,7 +1,7 @@
 import gsap from 'gsap';
 import Swiper from 'swiper';
 import { Navigation, Mousewheel, HashNavigation, Manipulation } from 'swiper/modules';
-import 'swiper/swiper-bundle.css'; // Importar os estilos do Swiper
+import 'swiper/swiper-bundle.css'; 
 
 export default class MySwiper {
   constructor() {
