@@ -7,8 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node src/server.js",
     "dev": "webpack serve --mode development --open",
-    "build": "webpack --mode production",
-    "preinstall": "npx npm-force-resolutions"
+    "build": "webpack --mode production"
   },
   "repository": {
     "type": "git",
@@ -31,8 +30,11 @@
     "css-minimizer-webpack-plugin": "^7.0.0",
     "eslint": "^9.5.0",
     "file-loader": "^6.2.0",
+    "find-up": "^5.0.0",
     "html-webpack-plugin": "^5.6.0",
+    "locate-path": "^6.0.0",
     "mini-css-extract-plugin": "^2.9.0",
+    "pkg-dir": "^5.0.0",
     "style-loader": "^4.0.0",
     "terser-webpack-plugin": "^5.3.10",
     "url-loader": "^4.1.1",
