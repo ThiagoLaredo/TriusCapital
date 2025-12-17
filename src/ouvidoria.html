@@ -73,14 +73,14 @@
                         <div class="form-field">
                             <label for="titulo">Título <span class="required">*</span></label>
                             <input type="text" id="titulo" name="titulo" required 
-                                   placeholder="Digite o título da denúncia">
+                                    placeholder="Digite o título da denúncia">
                         </div>
                         
                         <!-- Campo Descrição -->
                         <div class="form-field">
                             <label for="descricao">Descrição <span class="required">*</span></label>
                             <textarea id="descricao" name="descricao" rows="5" required 
-                                      placeholder="Descreva os fatos com detalhes"></textarea>
+                                        placeholder="Descreva os fatos com detalhes"></textarea>
                             <p class="form-note">Inclua nomes, cargos, datas, locais e outras informações relevantes.</p>
                         </div>
                         
@@ -89,13 +89,13 @@
                             <div class="half-width-1">
                                 <label for="nome">Nome Completo</label>
                                 <input type="text" id="nome" name="nome" 
-                                       placeholder="Seu nome completo (opcional)">
+                                        placeholder="Seu nome completo (opcional)">
                             </div>
                             
                             <div class="half-width">
                                 <label for="email">E-mail</label>
                                 <input type="email" id="email" name="email" 
-                                       placeholder="seu@email.com (opcional)">
+                                        placeholder="seu@email.com (opcional)">
                             </div>
                             <div style="clear: both;"></div>
                         </div>
@@ -104,10 +104,16 @@
                         <div class="file-upload">
                             <label for="anexos">Anexar Arquivos</label>
                             <input type="file" id="anexos" name="anexos[]" multiple 
-                                   accept=".pdf,.doc,.docx,.jpg,.jpeg,.png,.txt">
+                                    accept=".pdf,.doc,.docx,.jpg,.jpeg,.png,.txt">
                             <div class="file-info">
                                 <p>Formatos aceitos: PDF, DOC, JPG, PNG, TXT</p>
                                 <p>Tamanho máximo: 5MB por arquivo</p>
+                                <p class="warning-text">⚠️ Os arquivos serão enviados como anexos no email</p>
+                                <p class="warning-text">⚠️ Você pode remover arquivos antes de enviar clicando em "Remover"</p>
+                            </div>
+                            <!-- Container para listar os arquivos selecionados -->
+                            <div id="file-list-container" class="file-list-container">
+                                <!-- Os arquivos serão listados aqui dinamicamente -->
                             </div>
                         </div>
                         
