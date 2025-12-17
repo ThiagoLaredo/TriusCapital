@@ -1,6 +1,7 @@
 [build]
-  command = "npm run build"
+  command = "npm ci && npm run build"
   publish = "dist"
 
 [build.environment]
-  NODE_VERSION = "20.11.1"  # Use uma versão LTS estável
+  NODE_VERSION = "20.11.1"
+  NPM_FLAGS = "--legacy-peer-deps"
