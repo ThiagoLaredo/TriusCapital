@@ -102,8 +102,12 @@ export default class MySwiper {
   initializeSwiper() {
     this.swiper = new Swiper(".mySwiper", {
       direction: "vertical",
-      speed: 1000,
-      mousewheel: true,
+      speed: 500,
+      mousewheel: {
+          thresholdDelta: 30,  // valor padrão é 30, mas você pode aumentar para tornar menos sensível
+          thresholdTime: 200,
+          releaseOnEdges: true, // libera a rolagem quando chegar nas bordas
+      },      
       preventClicks: false,
       preventClicksPropagation: false,
       autoHeight: false,
@@ -172,8 +176,8 @@ export default class MySwiper {
         {
           y: 0,
           opacity: 1,
-          duration: 0.5,
-          stagger: 0.2,
+          duration: 0.3,
+          stagger: 0.1,
           ease: "power1.out",
         onComplete: () => {
           if (!this.isMobile()) {
@@ -217,7 +221,7 @@ export default class MySwiper {
             const val = Math.round(this.targets()[0].innerHTML);
             // Se o valor for maior ou igual a 1000000000, define como "+ 1 BI"
             if (val >= 1000000000) {
-              element.innerHTML = "+ 1 BI";
+              element.innerHTML = "+ 3 BI";
             } else {
               // Caso contrário, atualiza o texto com o valor atual formatado
               element.innerHTML = "+ " + val.toLocaleString();
@@ -225,7 +229,7 @@ export default class MySwiper {
           },
           onComplete: function () {
             // Quando a animação termina, garante que o texto é "+ 1 BI"
-            element.innerHTML = "+ 1 Bi";
+            element.innerHTML = "+ 3 Bi";
             // Marca o elemento como animado
             element.setAttribute('data-animated', 'true');
           },
@@ -276,8 +280,8 @@ export default class MySwiper {
           let seletor = mapaSVG.querySelector(`.${pais}`) ? `.${pais}` : `#${pais}`;
           gsap.to(seletor, {
             fill: '#4E7A9B',
-            delay: index * 0.3, // Mantém o delay existente entre as animações dos países
-            duration: 1,
+            delay: index * 0.1, // Mantém o delay existente entre as animações dos países
+            duration: 0.5,
           });
         });
       });

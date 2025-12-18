@@ -16,24 +16,28 @@ export default class ScrollAnima {
   }
 
   animateSections() {
-    this.sections.forEach(section => {
-      const elements = section.querySelectorAll('.slide-content-position');
-      if (elements.length > 0) { // Verifica se há elementos para animar
-        gsap.fromTo(elements, 
-          { y: -30, opacity: 0 }, 
-          {
-            y: 0, opacity: 1, duration: 0.6, stagger: 0.1, ease: "power1.out",
-            scrollTrigger: {
-              trigger: section,
-              start: "top 60%",
-              end: "bottom 20%",
-              toggleActions: "play none none none",
-              markers: false,
-            },
-          }       
-        );
-      }
-    }); 
+      this.sections.forEach(section => {
+          const elements = section.querySelectorAll('.slide-content-position');
+          if (elements.length > 0) {
+              gsap.fromTo(elements, 
+                  { y: -30, opacity: 0 }, 
+                  {
+                      y: 0, 
+                      opacity: 1, 
+                      duration: 0., // Mais rápido
+                      stagger: 0.05, // Menos intervalo
+                      ease: "power3.out", // Aceleração mais agressiva
+                      scrollTrigger: {
+                          trigger: section,
+                          start: "top 70%", // Ajuste do ponto de ativação
+                          end: "bottom 20%",
+                          toggleActions: "play none none none",
+                          markers: false,
+                      },
+                  }       
+              );
+          }
+      }); 
   }
 
   animateMapScroll() {
@@ -96,7 +100,7 @@ export default class ScrollAnima {
             const val = Math.round(this.targets()[0].innerHTML);
             // Se o valor for maior ou igual a 1000000000, define como "+ 1 BI"
             if (val >= 1000000000) {
-              element.innerHTML = "+ 1 BI";
+              element.innerHTML = "+ 3 BI";
             } else {
               // Caso contrário, atualiza o texto com o valor atual formatado
               element.innerHTML = "+ " + val.toLocaleString();
@@ -104,7 +108,7 @@ export default class ScrollAnima {
           },
           onComplete: function () {
             // Quando a animação termina, garante que o texto é "+ 1 BI"
-            element.innerHTML = "+ 1 BI";
+            element.innerHTML = "+ 3 BI";
             // Marca o elemento como animado
             element.setAttribute('data-animated', 'true');
           },
@@ -140,8 +144,8 @@ export default class ScrollAnima {
       }
     });
   }
-  
 
+  
   init() {
     if (this.sections.length) {
       if (this.isMobile()) {
